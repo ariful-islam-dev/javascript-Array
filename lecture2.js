@@ -1,24 +1,26 @@
-//constructor Pattern
+const numbers = [1, 2, 7, 4, 5];
 
-const a1 = new Array();
-// console.log(a1, a1.length);
+numbers[2] = 3;
 
-const a2 = new Array(5);
-// console.log(a2, a2.length);
+console.log(numbers);
 
-const a3 = new Array(1, 2, 3, 4, 5);
-// console.log(a3, a3.length);
+//Array of Objects
+const students = [
+  { id: 1, name: "Ariful Islam" },
+  { id: 2, name: "Abdullah Al Zarif" },
+  { id: 3, name: "Aysha Mone" },
+  { id: 4, name: "Toraf Ali Howlader" },
+  { id: 5, name: "Halima Begum" },
+];
 
-// Factory Pattern
+const givenID = 3;
+const updatedName = "Sadiqul Islam Jamil";
 
-const b1 = Array();
-console.log(b1, b1.length);
+for (let i = 0; i < students.length; i++) {
+  if (givenID === students[i].id) {
+    students[i].name = updatedName;
+    break;
+  }
+}
 
-const b2 = Array(5);
-console.log(b2, b2.length);
-
-const b3 = Array(1, 2, 3, 4, 5);
-console.log(b3, b3.length);
-
-console.log(a1.__proto__.constructor);
-console.log(b1.__proto__.constructor);
+console.log(students);
