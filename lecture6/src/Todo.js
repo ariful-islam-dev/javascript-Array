@@ -20,7 +20,7 @@ class Todo {
     const item = {
       text,
       id: generateId(this.todoList),
-      created: newDate(),
+      created: new Date(),
     };
     this.todoList.push(item);
   }
@@ -41,7 +41,7 @@ class Todo {
   list() {
     return this.todoList;
   }
-  find(item) {
+  find(term) {
     const result = [];
     for (let i = 0; i < this.todoList.length; i++) {
       const item = this.todoList[i];
