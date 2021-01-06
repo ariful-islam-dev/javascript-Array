@@ -1,26 +1,37 @@
-const numbers = [1, 2, 7, 4, 5];
+const MAX_SIZE = 30;
 
-numbers[2] = 3;
-
-console.log(numbers);
-
-//Array of Objects
-const students = [
-  { id: 1, name: "Ariful Islam" },
-  { id: 2, name: "Abdullah Al Zarif" },
-  { id: 3, name: "Aysha Mone" },
-  { id: 4, name: "Toraf Ali Howlader" },
-  { id: 5, name: "Halima Begum" },
-];
-
-const givenID = 3;
-const updatedName = "Sadiqul Islam Jamil";
-
-for (let i = 0; i < students.length; i++) {
-  if (givenID === students[i].id) {
-    students[i].name = updatedName;
-    break;
+class Stack {
+  constructor() {
+    this.list = new Array(MAX_SIZE);
+    this.top = -1;
+  }
+  push(item) {
+    if (this.top >= MAX_SIZE) {
+      console.log("stack Overflow");
+    }
+    this.list[++this.top] = item;
+    return true;
+  }
+  pop() {
+    if (this.isEmpty()) {
+      console.log("Stack Underflow");
+      return false;
+    }
+    let item = this.list[this.top];
+    delete this.list[this.top];
+    this.top--;
+    return item;
+  }
+  peek() {
+    if (this.isEmpty()) {
+      console.log("Stack Underflow");
+      return false;
+    }
+    return this.list[this.top];
+  }
+  isEmpty() {
+    return this.top < 0;
   }
 }
 
-console.log(students);
+module.exports = Stack;

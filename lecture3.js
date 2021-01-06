@@ -1,44 +1,27 @@
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const Stack = require("./lecture2");
+const stack = new Stack();
+const text = "HELLO";
 
-//Remove First Element
-numbers.shift();
-
-//Remove Last Element
-numbers.pop();
-numbers.length = numbers.length - 1;
-
-//Remove Inside Elemnts
-numbers.splice(2, 1);
-
-// Remove Inside Elements - Splice using value
-
-const toBeDeleted = 5;
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] === toBeDeleted) {
-    numbers.splice(i, 1);
-  }
+for (let i = 0; i < text.length; i++) {
+  stack.push(text.charAt(i));
+}
+let reversedText = "";
+while (!stack.isEmpty()) {
+  // console.log(`[Poped] `);
+  // console.log(stack);
+  reversedText += stack.pop();
 }
 
-// Filter Array
-const toBeDelted1 = 6;
-numbers = numbers.filter((item) => item !== toBeDelted1);
+// console.log(reversedText);
+// console.log(stack);
 
-// Delete Operator
-// numbers[1] = undefined;
-delete numbers[1];
+// Javascript Array Stack Method
+const text1 = "HELLO";
+const jsStack = [];
 
-// Reset Whole Array
-let x = [1, 2, 3];
-let y = x;
-x = [];
-
-//Alternative
-let xx = [1, 2, 3];
-let yy = xx;
-xx.length = 0;
-console.log(xx, yy);
-
-// Reset array using while loop
-while (numbers.length) numbers.pop();
-
-console.log(numbers);
+for (let i = 0; i < text1.length; i++) {
+  jsStack.push(text1.charAt(i));
+}
+let result1 = "";
+while (jsStack.length) result1 += jsStack.pop();
+console.log(result1);
