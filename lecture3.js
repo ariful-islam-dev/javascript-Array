@@ -1,27 +1,20 @@
-const Stack = require("./lecture2");
-const stack = new Stack();
-const text = "HELLO";
+const Queue = require("./lecture2");
+// const queue = new Queue();
+// queue.enqueue("Task One");
+// queue.enqueue("Task Two");
+// queue.enqueue("Task Three");
+// queue.showQueue()
+// queue.dequeue()
+// queue.dequeue()
+// queue.showQueue()
+// console.log(queue.next());
+// console.log(queue);
 
-for (let i = 0; i < text.length; i++) {
-  stack.push(text.charAt(i));
-}
-let reversedText = "";
-while (!stack.isEmpty()) {
-  // console.log(`[Poped] `);
-  // console.log(stack);
-  reversedText += stack.pop();
-}
-
-// console.log(reversedText);
-// console.log(stack);
-
-// Javascript Array Stack Method
-const text1 = "HELLO";
-const jsStack = [];
-
-for (let i = 0; i < text1.length; i++) {
-  jsStack.push(text1.charAt(i));
-}
-let result1 = "";
-while (jsStack.length) result1 += jsStack.pop();
-console.log(result1);
+const q = [];
+q.push('Item One')
+q.push('Item Two')
+q.push('Item Three')
+console.log(q);
+q.shift()
+q.shift()
+console.log(q);

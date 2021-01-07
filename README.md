@@ -1,6 +1,9 @@
 # Array 
 - How to using Array for problem solving
 
-## Stack concept
+## Queue;
+Queue is one kind of datastacture
+First In First Out
 
-# Stack
+> Queue.Enqeue(any) same of Stack.push(any)
+>Queue.Deqeue() same of Stack.shift()

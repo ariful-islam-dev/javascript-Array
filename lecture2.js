@@ -1,37 +1,47 @@
 const MAX_SIZE = 30;
-
-class Stack {
+class Queue {
   constructor() {
-    this.list = new Array(MAX_SIZE);
-    this.top = -1;
+    this.front = 0;
+    this.rear = 0;
+    this.queue = new Array(MAX_SIZE);
   }
-  push(item) {
-    if (this.top >= MAX_SIZE) {
-      console.log("stack Overflow");
-    }
-    this.list[++this.top] = item;
-    return true;
-  }
-  pop() {
-    if (this.isEmpty()) {
-      console.log("Stack Underflow");
+  enqueue(item) {
+    if (this.rear === MAX_SIZE) {
+      console.log("Queue is full");
       return false;
     }
-    let item = this.list[this.top];
-    delete this.list[this.top];
-    this.top--;
-    return item;
+    this.queue[this.rear++] = item;
   }
-  peek() {
+  dequeue() {
     if (this.isEmpty()) {
-      console.log("Stack Underflow");
-      return false;
+      console.log("Queue is Empty");
+      return;
     }
-    return this.list[this.top];
+    const item = this.queue[this.front];
+    for (let i = this.front; i < this.rear-1; i++) {
+      this.queue[i] = this.queue[i + 1];
+    }
+    delete this.queue[--this.rear];
+    return ;
+  }
+  showQueue() {
+    if (this.isEmpty()) {
+      console.log("Queue is Empty");
+      return;
+    }
+    for (let i = this.front; i < this.rear; i++) {
+      console.log("[Displaying]", this.queue[i]);
+    }
+  }
+  next() {
+    if (this.isEmpty()) {
+      console.log("Queue is Empty");
+      return;
+    }
+    return this.queue[this.front];
   }
   isEmpty() {
-    return this.top < 0;
+    return this.front === this.rear;
   }
 }
-
-module.exports = Stack;
+module.exports = Queue;
