@@ -36,8 +36,8 @@ const linearSearchCB = (arr, cb) => {
     return -1
 }
 
-const s3 = linearSearchCB(team, item=>item.name === 'Ariful')
+const s3 = linearSearchCB(team, item => item.name === 'Aysha')
 console.log(s3);
 
-const s4 = linearSearchCB(team, item=> item.id=== 40)
+const s4 = linearSearchCB(team, item => item.id === 4)
 console.log(s4);
