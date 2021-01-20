@@ -5,3 +5,6 @@
 [x] buble sort
 [x] linear search
 [x] binary search
+
+## find()
+ [x] customize find() method
