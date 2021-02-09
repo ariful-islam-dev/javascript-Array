@@ -5,3 +5,4 @@
 
 - [x] Array.from()
 - [x] Array.isArray()
+- [x] Array.join()
