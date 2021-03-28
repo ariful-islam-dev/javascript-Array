@@ -10,3 +10,4 @@
 #### Lectures
 - [x] Lecture 01 Array is an Object
 - [x] Lecture 02 Copy Array Elements
+- [x] Lecture 03 Compare Two Array
