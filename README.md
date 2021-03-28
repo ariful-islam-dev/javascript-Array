@@ -3,6 +3,9 @@
 
 ## Instance Method
 - [ ] Iterator
+- [ ] array.keys()
+- [ ] array.values()
+- [ ] arra.entries()
 
 
 
