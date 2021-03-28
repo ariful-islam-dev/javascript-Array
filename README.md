@@ -12,3 +12,4 @@
 #### Lectures
 - [x] Lecture 01 Iterator
 - [x] Lecture 02 Find Iterator
+- [x] Lecture 03 Instance Method
